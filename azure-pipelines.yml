@@ -27,8 +27,9 @@ steps:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
 
-- task: PublishCodeCoverageResults@1
+- task: PublishCodeCoverageResults@2
   inputs:
-    codeCoverageTool: 'JaCoCo'
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/target/site/jacoco/*.xml'
-    pathToSources: '$(System.DefaultWorkingDirectory)/src/main/java/'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/target/site/cobertura/coverage.xml'
+    pathToSources: '$(System.DefaultWorkingDirectory)/target/site/cobertura/'
+
+
