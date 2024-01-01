@@ -10,6 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
+- script: |
+    mvn install
+    mvn build
+  displayName: 'mvn install and build'
+
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
