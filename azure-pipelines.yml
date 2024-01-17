@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: NewPoolSH
+  name: NewPoolSH
 
 steps:
 
